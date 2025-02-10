@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Importamos el namespace de Thymeleaf -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos/header::header-seccion(titulo='Confirmar eliminación')}">
+</head>
+<body>
+<div th:replace="~{fragmentos/nav::nav-seccion}"></div>
+<h3 class="text-center">¿Estás seguro de que quieres eliminar este contacto?</h3>
+<p class="text-center">Nombre: <span th:text="${contacto.nombre}"></span></p>
+<p class="text-center">Teléfono: <span th:text="${contacto.numeroTelefono}"></span></p>
+<p class="text-center">Email: <span th:text="${contacto.email}"></span></p>
+<form th:action="@{/eliminar/{id}(id=${contacto.id})}" method="post">
+    <div class="text-center">
+        <button type="submit" class="btn btn-warning btn-sm me-3">Confirmar</button>
+    </div>
+</form>
+<div class="text-center">
+<a href="/" class="btn btn-danger btn-sm me-3">Cancelar</a>
+</div>
+<!-- Reemplazamos el div por la ruta en la que se encuentra el footer, e incluimos solo la sección llamada así (en
+nuestro caso querríamos incluir todo el footer, pero es para aprender que podemos introducir solo secciones
+determinadas si quisiéramos -->
+<div th:replace="~{fragmentos/footer::footer-seccion}"></div>
+</body>
+</html>

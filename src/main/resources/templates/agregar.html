@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Importamos el namespace de Thymeleaf -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos/header::header-seccion(titulo='Agregar')}">
+</head>
+<body>
+<div th:replace="~{fragmentos/nav::nav-seccion}"></div>
+<div class="container">
+    <div class="container text-center" style="margin: 30px">
+        <h3>Agregar Contacto</h3>
+    </div>
+    <div class="container">
+        <form action="/agregar" modelAttribute="contactoForma" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required="true">
+            </div>
+            <div class="mb-3">
+                <label for="numeroTelefono" class="form-label">Número de Teléfono</label>
+                <input type="text" class="form-control" id="numeroTelefono" name="numeroTelefono">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning btn-sm me-3">Aceptar</button>
+                <a href="/" class="btn btn-danger btn-sm">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div th:replace="~{fragmentos/footer::footer-seccion}"></div>
+</body>
+</html>
