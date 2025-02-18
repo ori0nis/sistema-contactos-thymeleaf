@@ -2,9 +2,7 @@
 
 Sistema de Empleados is a simple management system where you can add, modify or delete contacts that are allocated in a SQL database. This app is a sort of iteration of a previous JSP app called Sistema de Empleados that you can find [here](https://github.com/ori0nis/sistema-empleados-jsp). The goal was to use a new and similar technology to increase my knowledge/resources in web programming.
 
-The frontend uses Thymeleaf to produce dynamic code, and it was styled using Bootstrap. The database is managed with Springboot, JPA and Hibernate.
-
-This app was created following Ubaldo Acosta's lead during his "Universidad Java" masterclass.
+The frontend uses Thymeleaf, and it was styled using Bootstrap. The database is managed with Springboot, JPA and Hibernate.
 
 Technologies used include:
 
